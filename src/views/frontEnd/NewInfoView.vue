@@ -23,7 +23,8 @@
             g-3 g-md-6">
             <div class="col-md-5">
               <img :src="item.imageUrl" alt=""
-              class="img-fluid rounded-3 h-100 bg-cover">
+              class="rounded-3 bg-cover"
+              height="350px;">
             </div>
             <div class="col-md-6 d-flex flex-column
             justify-content-center">

@@ -170,8 +170,8 @@
           <div class="col"
             v-if="key < 3">
             <div class="card h-100">
-              <img :src="news.imageUrl" class="card-img-top
-              h-100 bg-cover">
+              <img :src="news.imageUrl" class="bg-cover"
+              height="300px;">
               <div class="card-body">
                 <div class="card-title fw-bold text-center">
                   {{news.title}}

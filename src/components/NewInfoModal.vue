@@ -23,7 +23,8 @@
             {{$filters.date(tempArticleModal.create_at)}}
           </small>
           <div class="card bg-transparent border-0">
-            <img :src="tempArticleModal.imageUrl" class="card-img-top rounded-3">
+            <img :src="tempArticleModal.imageUrl" class="rounded-3
+            bg-cover" height="350px;">
             <div class="card-body">
               <p class="card-text mb-0"
               style="color: #9966cc;
