@@ -1,4 +1,4 @@
-import{S as r}from"./sweetalert2.all-CBfQbRcE.js";import{_ as c,o,c as i,a as t,w as l,d as a}from"./index-MZTuqQ4e.js";const n={methods:{payFor(){r.fire({title:"付款成功",text:"我們已收到您的訂單，感謝您的支持!",imageUrl:"https://media.istockphoto.com/id/1471121446/photo/consumers-rate-their-satisfaction-5-stars-customer-experience-survey-concepts-for-services.jpg?s=2048x2048&w=is&k=20&c=Jxuv6Yj1i0ChZGHNR3i5H7kPByrudNUl_sxM_TCyFHI=",imageWidth:400,imageHeight:200,imageAlt:"Custom image",confirmButtonColor:"#cc99ff",confirmButtonText:`
+import{S as r}from"./sweetalert2.all-59_J5c0r.js";import{_ as c,o,c as i,a as t,w as l,d as a}from"./index-lOyuVsX-.js";const n={methods:{payFor(){r.fire({title:"付款成功",text:"我們已收到您的訂單，感謝您的支持!",imageUrl:"https://media.istockphoto.com/id/1471121446/photo/consumers-rate-their-satisfaction-5-stars-customer-experience-survey-concepts-for-services.jpg?s=2048x2048&w=is&k=20&c=Jxuv6Yj1i0ChZGHNR3i5H7kPByrudNUl_sxM_TCyFHI=",imageWidth:400,imageHeight:200,imageAlt:"Custom image",confirmButtonColor:"#cc99ff",confirmButtonText:`
           <i class="bi bi-hand-thumbs-up"></i>
           確認
           <i class="bi bi-emoji-smile"></i>
