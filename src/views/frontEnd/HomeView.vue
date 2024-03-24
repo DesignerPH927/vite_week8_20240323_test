@@ -193,7 +193,7 @@
     </section>
     <div class="videoWrap d-none d-md-block">
       <video src="/video/wediding.mp4"
-      ref="weddingVideo"
+        ref="weddingVideo"
         muted loop autoplay></video>
     </div>
     <div class="fullImg d-block d-md-none">
@@ -644,9 +644,8 @@ export default {
     },
     closeVideo() {
       const wVideo = this.$refs.weddingVideo;
-      if (!wVideo.paused) {
-        wVideo.pause();
-      }
+      console.log(wVideo);
+      wVideo.pause();
       // wVideo.addEventListener('fullscreenchange', () => {
       //   if (!document.fullscreenElement) {
       //     wVideo.pause();
