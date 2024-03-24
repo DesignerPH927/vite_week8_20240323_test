@@ -162,6 +162,7 @@
         text-decoration-underline fw-bold mb-3"
         style="text-transform:capitalize;
         color:#9966cc"
+        @click="closeVideo"
         >More</RouterLink>
         <div class="row row-cols-md-2 row-cols-xl-3
         row-cols-1 g-3">
@@ -217,7 +218,8 @@
             <div class="card h-100">
               <div class="row g-0 h-100">
                 <div class="col-md-7">
-                  <img src="https://img.freepik.com/free-photo/view-3d-videographer-with-camera_23-2151067043.jpg?t=st=1709803117~exp=1709806717~hmac=af9f650b69f12ce1b0c3aa4917bc458c8192c315c7affd3e4f2abe586a7a0821&w=996" class="img-fluid rounded-start h-100 bg-cover" alt="...">
+                  <img src="https://img.freepik.com/free-photo/view-3d-videographer-with-camera_23-2151067043.jpg?t=st=1709803117~exp=1709806717~hmac=af9f650b69f12ce1b0c3aa4917bc458c8192c315c7affd3e4f2abe586a7a0821&w=996" class="rounded-start bg-cover"
+                  height="300px;">
                 </div>
                 <div class="col-md-5">
                   <div class="card-body d-flex
@@ -640,10 +642,20 @@ export default {
     resetData() {
       this.$refs.form.resetForm();
     },
+    closeVideo() {
+      const wVideo = this.$refs.weddingVideo;
+      if (!wVideo.paused) {
+        wVideo.pause();
+      }
+      // wVideo.addEventListener('fullscreenchange', () => {
+      //   if (!document.fullscreenElement) {
+      //     wVideo.pause();
+      //   }
+      // });
+    },
   },
   mounted() {
     this.getArticles();
-    const wVideo = this.$refs.weddingVideo;
     const cartDropBox = document.querySelector('.cartDropBox');
     const headerCart = document.querySelector('.headerCart');
     const headerLove = document.querySelector('.headerLove');
@@ -662,11 +674,6 @@ export default {
     headerLove.addEventListener('click', () => {
       favoriteDropBox.classList.add('showFavorite');
       cartDropBox.classList.remove('showCart');
-    });
-    wVideo.addEventListener('fullscreenchange', () => {
-      if (!document.fullscreenElement) {
-        wVideo.pause();
-      }
     });
     gsap.to('#couple', {
       scrollTrigger: {
