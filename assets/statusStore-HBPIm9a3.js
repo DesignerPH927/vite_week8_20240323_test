@@ -1,1 +1,0 @@
-import{s as a}from"./index-olWomzGW.js";const h=a("statusStore",{state:()=>({messages:[]}),actions:{toastShow(){setTimeout(()=>{this.messages.shift()},6e3)},toastClear(s){this.messages.splice(s,1)},pushMessage(s){const{style:t="success",title:e,content:o}=s;this.messages.push({style:t,title:e,content:o}),this.toastShow()}}});export{h as u};
