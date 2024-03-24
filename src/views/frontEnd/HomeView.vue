@@ -146,11 +146,7 @@
     <div class="marqueeWrap">
       <Vue3Marquee
       :clone="true" :duration="20">
-        <img
-            v-for="img in imgArray"
-            :key="img"
-            :src="img"
-        />
+        <img src="/img/marquee/bar_icon.png">
       </Vue3Marquee>
     </div>
     <section id="newInfo">
@@ -196,6 +192,7 @@
     </section>
     <div class="videoWrap d-none d-md-block">
       <video src="/video/wediding.mp4"
+      ref="weddingVideo"
         muted loop autoplay></video>
     </div>
     <div class="fullImg d-block d-md-none">
@@ -391,11 +388,7 @@
     <div class="marqueeWrap">
       <Vue3Marquee
       :clone="true" :duration="20">
-        <img
-            v-for="img in imgArray"
-            :key="img"
-            :src="img"
-        />
+        <img src="/img/marquee/bar_icon.png">
       </Vue3Marquee>
     </div>
     <div class="itemWall">
@@ -595,9 +588,6 @@ export default {
   data() {
     return {
       isLoading: true,
-      imgArray: [
-        '/img/marquee/bar_icon.png',
-      ],
       remoteArticles: [],
       tempArticle: {},
       form: {
@@ -653,6 +643,7 @@ export default {
   },
   mounted() {
     this.getArticles();
+    const wVideo = this.$refs.weddingVideo;
     const cartDropBox = document.querySelector('.cartDropBox');
     const headerCart = document.querySelector('.headerCart');
     const headerLove = document.querySelector('.headerLove');
@@ -671,6 +662,11 @@ export default {
     headerLove.addEventListener('click', () => {
       favoriteDropBox.classList.add('showFavorite');
       cartDropBox.classList.remove('showCart');
+    });
+    wVideo.addEventListener('fullscreenchange', () => {
+      if (!document.fullscreenElement) {
+        wVideo.pause();
+      }
     });
     gsap.to('#couple', {
       scrollTrigger: {
